@@ -1,0 +1,508 @@
+$regular   = 'MetricRegular'
+$bold      = 'MetricBold'
+$medium    = 'MetricSemiBold'
+$light     = 'MetricLight'
+$color   = #FDB913
+$default = #01a982
+flexCenter()
+	display flex
+	display -webkit-flex
+	align-items center
+flexStart()
+	display flex
+	display -webkit-flex
+	align-items start
+flexEnd()
+	display flex
+	display -webkit-flex
+	align-items flex-end
+transitionAll()
+	-webkit-transition all .3s linear
+	-moz-transition all .3s linear
+	-ms-transition all .3s linear
+	-o-transition all .3s linear
+	transition all .3s linear
+transitionOpacity()
+	-webkit-transition opacity .3s linear
+	-moz-transition opacity .3s linear
+	-ms-transition opacity .3s linear
+	-o-transition opacity .3s linear
+	transition opacity .3s linear
+transitionWidth()
+	-webkit-transition width .3s linear
+	-moz-transition width .3s linear
+	-ms-transition width .3s linear
+	-o-transition width .3s linear
+	transition width .3s linear
+transitionMaxWidth()
+	-webkit-transition max-width .3s linear
+	-moz-transition max-width .3s linear
+	-ms-transition max-width .3s linear
+	-o-transition max-width .3s linear
+	transition max-width .3s linear
+transitionBgColor()
+	-webkit-transition background-color .3s linear
+	-moz-transition background-color .3s linear
+	-ms-transition background-color .3s linear
+	-o-transition background-color .3s linear
+	transition background-color .3s linear
+transitionTransform()
+	-webkit-transition transform .3s linear
+	-moz-transition transform .3s linear
+	-ms-transition transform .3s linear
+	-o-transition transform .3s linear
+	transition transform .3s linear
+absolute()
+	position absolute
+	top 0
+	left 0
+	right 0
+	bottom 0
+relative()
+	position relative
+	top 0
+	left 0
+	right 0
+	bottom 0
+flipCard()
+	-moz-backface-visibility hidden
+	-webkit-backface-visibility hidden
+	backface-visibility hidden
+	-webkit-transition -webkit-transform 500ms
+	-moz-transition -moz-transform 500ms
+	-o-transition -o-transform 500ms
+	transition transform 500ms
+	border-radius 5px
+	position absolute
+flipCardFront()
+	-webkit-transform perspective(600) rotateY(0)
+	-moz-transform perspective(600) rotateY(0)
+	-o-transform perspective(600) rotateY(0)
+	transform perspective(600) rotateY(0)
+flipCardBack()
+	-webkit-transform rotateY(-180deg)
+	-moz-transform rotateY(-180deg)
+	-o-transform rotateY(-180deg)
+	transform rotateY(-180deg)
+	z-index 900
+flipCardFrontHover()
+	-webkit-transform rotateY(180deg)
+	-moz-transform rotateY(180deg)
+	-o-transform rotateY(180deg)
+	transform rotateY(180deg)
+	-webkit-transform perspective(600) rotateY(180deg)
+	-moz-transform perspective(600) rotateY(180deg)
+	-o-transform perspective(600) rotateY(180deg)
+	transform perspective(600) rotateY(180deg)
+flipCardBackHover()
+	-webkit-transform rotateY(0)
+	-moz-transform rotateY(0)
+	-o-transform rotateY(0)
+	transform rotateY(0)
+	-webkit-transform perspective(600) rotateY(0)
+	-moz-transform perspective(600) rotateY(0)
+	-o-transform perspective(600) rotateY(0)
+	transform perspective(600) rotateY(0)
+	z-index 950
+body
+	margin 0
+	padding 0
+	overflow hidden
+	overflow-y scroll
+	font-family $regular
+	color #000000
+	background-color #EFEFEF
+img
+	width 100%
+p
+	margin 0
+	font-size 18px
+strong
+	font-family $medium
+.js-section
+	position relative
+	padding 40px 20px
+.js-white
+	background-color #FFFFFF
+.js-title
+	text-align center
+	font-size 32px
+	font-family $bold
+	margin 20px 0
+	&.white
+		color #FFFFFF
+	p
+		font-family $medium
+		font-size 18px
+		line-height 20px
+	small
+		font-family $regular
+		font-size 16px
+		line-height 18px
+.js-flex
+	flexCenter()
+	justify-content center
+.js-flex--start
+	flexStart()
+	justify-content center
+.js-height
+	height 100vh
+.js-header
+	transitionAll()
+	position fixed
+	top 0
+	width 100%
+	z-index 5
+	padding 5px 25px
+	color #FFFFFF
+	height 75px
+	&.js-fixed
+		background-color $color
+	.js-header--container
+		flexCenter()
+		width 100%
+		max-width 1150px
+		margin auto
+		height 100%
+	img
+		width 100%
+		max-width 250px
+	.js-header--left
+		flexCenter()
+		width 100%
+		max-width 300px
+		justify-content flex-start
+	.js-header--right
+		flexCenter()
+		width 100%
+		justify-content flex-end
+		text-align right
+.js-container
+	transitionMaxWidth()
+	height 100%
+	width 100%
+	max-width 1150px
+	margin auto
+.js-home
+	height 500px
+.js-input
+	padding 7px 20px
+	height 70px
+	margin 0
+	border 1px solid rgba(0,0,0,0.15)
+	background-color #FFFFFF
+	margin-bottom -1px
+	color #333333
+	margin 5px 0
+	&.js-input--default
+		width 100%
+		max-width 400px
+		margin 20px auto
+	&.js-date
+		padding 5px 20px
+		.js-icon
+			width 100%
+			max-width 36px
+			text-align center
+	&.js-file
+		height 100%
+	&.js-radio
+		height 100%
+		.mdl-radio
+			width 100%
+			.mdl-radio__inner-circle
+				background $default
+			&.is-checked
+				.mdl-radio__outer-circle
+					border 2px solid $default
+			.mdl-radio__ripple-container 
+				.mdl-ripple
+					background $default
+	&.js-select
+		padding 0
+		.bootstrap-select
+			width 100% !important
+			height 100%;
+			.dropdown-toggle
+				padding 14px 24px
+				border-radius 0
+				box-shadow none
+				background-color transparent
+				height 100%
+				border none
+			.dropdown-menu
+				background-color rgba(248, 248, 248, 0.95)
+				border-radius 0
+				margin 0 
+				padding 0
+				&.open
+					margin 0
+					padding 0
+					li
+						a
+							padding 6px 20px
+							&:hover
+								background-color rgba(221,221,221,0.5)
+	label
+		font-family $light
+		color #666666
+		cursor pointer
+		margin-bottom 0
+		font-weight 100
+		font-size 14px
+	input
+		display block
+		height 36px
+		width 100%
+		border none
+		font-size 16px
+		&:focus
+			outline 0
+.js-select
+	&.js-standar
+		margin 5px 0
+		.bootstrap-select
+			width 100% !important
+			.btn-default
+				background-color #FFFFFF
+				color #757575
+				height 46px
+				border-radius 0	
+.js-contact-label
+	flexCenter()
+	flex-wrap wrap
+	.js-input-label
+		width 100%
+		max-width 120px
+.js-label
+	height 145px
+	margin 5px 0
+	span
+		font-family $bold
+		a
+			color #008FD3 !important
+	.mdl-checkbox__label
+		font-size 14px
+		color #000000
+		line-height 18px
+		font-family $regular
+		font-weight 100
+.js-button
+	background-color $default !important
+	text-decoration none !important
+	font-size 16px
+	color #FFFFFF !important
+	border 2px solid $default
+	margin 10px
+	font-family $medium
+	width 100%
+	max-width 160px
+	&.js-button--default
+		background-color transparent !important
+		border 2px solid #FFFFFF
+	&.js-login
+		background-color #535353 !important
+		border 2px solid #535353
+.mdl-radio__inner-circle
+	background #4983B6
+.mdl-checkbox
+	&.is-checked 
+		.mdl-checkbox__tick-outline
+			background #4983B6
+.mdl-checkbox__ripple-container 
+	&.mdl-ripple
+		background #4983B6
+.mdl-radio__ripple-container 
+	.mdl-ripple
+		background #4983B6
+.mdl-checkbox
+	&.is-checked 
+		.mdl-checkbox__box-outline
+			border 2px solid #4983B6
+.mdl-radio
+	&.is-checked 
+		.mdl-radio__outer-circle
+			border 2px solid #4983B6
+.js-checkbox
+	.mdl-checkbox
+		max-width 250px
+	.mdl-checkbox__label
+		font-size 15px
+		line-height 18px
+		font-weight 100
+	.mdl-checkbox__box-outline
+		border 2px solid #FFFFFF
+.js-fondo
+	absolute()
+	background url(../img/fondo/fondo-home.jpg) no-repeat center center
+	background-size cover
+	width 100%
+	height 500px
+	z-index -1
+	&:BEFORE
+		absolute()
+		content ''
+		background-color #000000
+		z-index 0
+		height 500px
+		opacity .5
+footer
+	background-color #000000
+	color #FFFFFF
+	p
+		font-size 14px
+.nav-tabs
+	border none
+	&>li
+		&>a
+			border none !important
+			font-size 18px
+	&>li
+		&.active
+			&>a
+				font-family $bold				
+/*CLASES PROYECTO*/
+.js-contenido
+	text-align center
+	color #FFFFFF
+	max-width 650px
+	h2
+		font-size 60px
+		line-height 60px
+		font-family $bold
+	p
+		font-size 32px
+		line-height 34px
+		margin-bottom 10px
+	small
+		font-size 18px
+.js-information
+	padding 20px 0
+	text-align center
+	h2
+		font-size 24px
+		line-height 26px
+		font-family $medium
+	p
+		font-size 18px
+		line-height 20px
+	span
+		font-size 16px
+		line-height 18px
+.js-card
+	background-color #FFFFFF
+	box-shadow 0 2px 5px rgba(0,0,0,0.16), 0 2px 5px rgba(0,0,0,0.23)
+	padding 20px
+.js-partners
+	text-align center
+	img
+		max-width 225px
+		margin 15px
+.js-book
+	background-color #614767 !important
+	text-decoration none !important
+	text-transform initial
+	color #FFFFFF !important
+	height 26px
+	line-height 26px
+	vertical-align middle
+.js-confirmation
+	width 100%
+	max-width 600px
+	color #FFFFFF
+	text-align center
+	margin 40px auto
+	display none
+	&.aparecer
+		display block
+	h2
+		font-family $medium
+		font-size 40px
+		line-height 40px
+		margin 20px 0
+	p
+		letter-spacing 1px
+#registered
+	&.aparecer
+		h2
+			color #000000
+			font-size 28px
+			line-height 30px
+.js-reserva
+	button
+		width 100%
+		max-width 200px
+/*MATERIAL DESIGN*/
+.mdl-card
+.mdl-card__supporting-text
+	width 100%
+/*MODAL*/
+.modal
+	&.fade
+		.modal-dialog
+			transform translate(-50% , -50%)
+			position absolute
+			top 50%
+			left 50%
+			.mdl-card__actions
+				padding 16px
+				button
+					margin 0 5px
+					text-transform initial
+					font-family $medium
+					&.js-button
+						background-color $default !important
+						text-decoration none !important
+						font-size 16px
+						color #FFFFFF !important
+						border 2px solid $default
+						width initial
+						font-family $medium
+		&.in
+			.modal-dialog
+				transform translate(1)
+				transform transform(-50% , -50%)
+				opacity 1
+/*TABLE*/
+table
+	&>tbody
+		&>tr
+			&>td
+				font-size 16px
+.table-responsive
+	border none
+	ul
+		padding 0
+	&.js-table
+		table
+			&>tbody
+				&>tr
+					&>td
+						white-space inherit
+.js-dont-bulled
+	list-style none
+	li
+		line-height 18px
+/*TOASTR*/
+/*SCROLL*/
+::-webkit-scrollbar
+	width 5px
+	height 5px
+::-webkit-scrollbar-track
+	background-color transparent
+	border-radius 10px
+::-webkit-scrollbar-thumb
+	background-color #AAAAAA
+	border-radius 10px
+@media (min-width: 768px)
+	.js-header
+		background-color transparent
+		&.navbarcolor
+			background-color #000000
+@media (max-width: 600px)
+	.js-contenido
+		padding 20px
+		h2
+			font-size 38px
+			line-height 42px
+			

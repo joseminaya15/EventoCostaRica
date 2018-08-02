@@ -1,0 +1,131 @@
+$light     = 'MetricLight'
+$regular   = 'MetricRegular'
+$medium    = 'MetricSemiBold'
+$bold      = 'MetricBold'
+$color     = #415564
+flexCenter()
+	display flex
+	display -webkit-flex
+	align-items center
+flexStart()
+	display flex
+	display -webkit-flex
+	align-items start
+flexEnd()
+	display flex
+	display -webkit-flex
+	align-items flex-end
+transitionMaxWidth()
+	-webkit-transition max-width .3s linear
+	-moz-transition max-width .3s linear
+	-ms-transition max-width .3s linear
+	-o-transition max-width .3s linear
+	transition max-width .3s linear
+body
+	margin 0
+	padding 0
+	font-family $regular
+	color #000000
+	background-color #FFFFFF
+p
+	margin 0
+h2
+	margin 20px 0
+label
+	font-weight 100
+.js-section
+	position relative
+	padding 40px 20px
+	&.js-section--admin
+		margin-top 50px
+.js-white
+	background-color #FFFFFF
+.js-title
+	text-align center
+	font-size 32px
+	font-family $bold
+	margin 20px 0
+	&.white
+		color #FFFFFF
+.js-flex
+	flexCenter()
+	justify-content center
+.js-flex--start
+	flexStart()
+	justify-content center
+.js-height
+	height 100vh
+.js-container
+	transitionMaxWidth()
+	height 100%
+	width 100%
+	max-width 1150px
+	margin auto
+.js-header
+	flexCenter()
+	position fixed
+	top 0
+	width 100%
+	background-color transparent
+	z-index 5
+	padding 15px 25px
+	color #FFFFFF
+	&.js-fixed
+		background-color $color
+	img
+		width 100%
+		max-width 200px
+	.js-header--left
+		flexCenter()
+		width 100%
+		max-width 300px
+		justify-content flex-start
+		p
+			font-family $bold
+			margin-left 10px
+			font-size 16px
+			line-height 16px
+		img
+			&.js-partner
+				margin-right 10px
+				padding-right 10px
+				border-right 1px solid #000000
+	.js-header--right
+		flexCenter()
+		width 100%
+		justify-content flex-end
+		text-align right
+		p
+			font-size 20px
+			line-height 18px
+		a
+			width 100%
+			text-decoration none
+			cursor pointer
+			font-size 18px
+			font-family $medium
+			color $default
+.js-login
+	width 100%
+	max-width 400px
+	h2
+		font-size 30px
+		line-height 30px
+		font-family $regular
+		color #FFFFFF
+		text-align center
+	.js-button--login
+		max-width 100%
+		margin 0
+	.js-radio
+		margin 20px 0
+		.mdl-checkbox
+			color #FFFFFF
+			&.is-checked
+				.mdl-checkbox__tick-outline
+					background #FFFFFF
+			.mdl-checkbox__box-outline
+				border-color #FFFFFF
+			.mdl-checkbox__ripple-container 
+				.mdl-ripple
+					background-color #FFFFFF

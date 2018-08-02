@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'MetricRegular';
+	src: url('MetricHPE/MetricHPE-Desktop-Regular.otf');
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: 'MetricBold';
+	src: url('MetricHPE/MetricHPE-Desktop-Bold.otf');
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: 'MetricLight';
+	src: url('MetricHPE/MetricHPE-Desktop-Light.otf');
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: 'MetricSemiBold';
+	src: url('MetricHPE/MetricHPE-Desktop-SemiBold.otf');
+	font-weight: 100;
+}
