@@ -4,13 +4,13 @@
     	<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible"  content="IE=edge">
         <meta name="viewport"               content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-        <meta name="description"            content="HPE LAC Value & Growth Channels Warriors">
-        <meta name="keywords"               content="HPE LAC Value & Growth Channels Warriors">
+        <meta name="description"            content="HPE Evento Costa Rica">
+        <meta name="keywords"               content="HPE Evento Costa Rica">
         <meta name="robots"                 content="Index,Follow">
         <meta name="date"                   content="Febrero 15, 2018"/>
         <meta name="language"               content="es">
         <meta name="theme-color"            content="#000000">
-    	<title>HPE LAC Value & Growth Channels Warriors</title>
+    	<title>HPE Evento Costa Rica</title>
     	<link rel="shortcut icon" href="<?php echo RUTA_IMG?>logo/favicon.ico">
     	<link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>toaster/toastr.min.css?v=<?php echo time();?>">
         <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
@@ -25,10 +25,10 @@
     <body>
         <div class="js-header">
             <div class="js-header--left">
-                <img src="<?php echo RUTA_IMG?>logo/hpe-intel.png">
+                <img src="<?php echo RUTA_IMG?>logo/hpe-vmware.png">
             </div>
             <div class="js-header--right">
-                <p>HPE LAC Value & Growth Channels Warriors</p>
+                <p>HPE Evento Costa Rica</p>
             </div>
         </div>
         <section class="js-section js-height">

@@ -147,6 +147,10 @@ strong
 	justify-content center
 .js-height
 	height 100vh
+	.js-fondo
+		height 100vh
+		&:BEFORE
+			height 100vh
 .js-header
 	transitionAll()
 	position fixed
@@ -156,6 +160,7 @@ strong
 	padding 5px 25px
 	color #FFFFFF
 	height 75px
+	background-color #000000
 	&.js-fixed
 		background-color $color
 	.js-header--container
@@ -365,7 +370,7 @@ footer
 .js-contenido
 	text-align center
 	color #FFFFFF
-	max-width 650px
+	max-width 680px
 	h2
 		font-size 60px
 		line-height 60px
@@ -408,7 +413,7 @@ footer
 	vertical-align middle
 .js-confirmation
 	width 100%
-	max-width 600px
+	max-width 550px
 	color #FFFFFF
 	text-align center
 	margin 40px auto
@@ -420,8 +425,7 @@ footer
 		font-size 40px
 		line-height 40px
 		margin 20px 0
-	p
-		letter-spacing 1px
+		color #000000
 #registered
 	&.aparecer
 		h2

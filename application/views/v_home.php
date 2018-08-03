@@ -16,18 +16,16 @@
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>mdl/material.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap-select/css/bootstrap-select.min.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>bootstrap/css/bootstrap.min.css?v=<?php echo time();?>">
-    <link rel="stylesheet"    href="<?php echo RUTA_PLUGINS?>datetimepicker/css/bootstrap-material-datetimepicker.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>material-icons.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_FONTS?>metric.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_CSS?>m-p.min.css?v=<?php echo time();?>">
-    <link rel="stylesheet"    href="<?php echo RUTA_CSS?>index.css?v=<?php echo time();?>">
     <link rel="stylesheet"    href="<?php echo RUTA_CSS?>style.css?v=<?php echo time();?>">
 </head>
 <body>
     <div class="js-header">
         <div class="js-header--container">
             <div class="js-header--left">
-                <img src="<?php echo RUTA_IMG?>logo/hpe-intel.png">
+                <img src="<?php echo RUTA_IMG?>logo/hpe-vmware.png">
             </div>
             <div class="js-header--right">
                 <p>P&aacute;gina de Registro</p>
@@ -39,12 +37,8 @@
         <div class="js-container">
             <div class="js-home js-flex">
                 <div class="js-contenido">
-                    <h2>Acelere los resultados de su negocio</h2>
-                    <p>Con las soluciones de HPE potenciadas con Intel®</p>
-                    <small>Intel Inside®, para una productividad poderosa.</small>
-                    <div class="js-contenido__buttons">
-                        <a href="#register" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect link js-button">REGISTRESE AQUÍ</a>
-                    </div>
+                    <h2>Virtualizaci&oacute;n, una soluci&oacute;n</h2>
+                    <p>Genere valor a la red del centro de datos con una soluci&oacute;n de virtualizaci&oacute;n de HPE y NSX</p>
                 </div>
             </div>
         </div>
@@ -107,8 +101,7 @@
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect js-button js-login" onclick="sendInformation()">Enviar</button>
             </div>
             <div id="confirmation" class="js-confirmation">
-                <h2>Gracias por registrarse</h2>
-                <p>Ahora para completar su registro y asegurar su cupo deber&aacute; ingresar su correo en la siguiente secci&oacute;n e indicarnos su fecha de llegada / salida as&iacute; como su reserva de hotel. (indispensable)</p>
+                <h2>Registro realizado correctamente. Lo esperamos</h2>
             </div>
         </div>
     </section>
@@ -182,21 +175,15 @@
     <script src="<?php echo RUTA_JS?>jquery-1.11.2.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>bootstrap/js/bootstrap.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/bootstrap-select.min.js?v=<?php echo time();?>"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-dropdown/2.0.3/jquery.dropdown.min.js"></script>
     <script src="<?php echo RUTA_PLUGINS?>bootstrap-select/js/i18n/defaults-es_ES.min.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>mdl/material.min.js?v=<?php echo time();?>"></script>
-    <script src="<?php echo RUTA_PLUGINS?>moment/moment.min.js?v=<?php echo time();?>"></script>
-    <script src="<?php echo RUTA_PLUGINS?>datetimepicker/js/bootstrap-material-datetimepicker.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_PLUGINS?>toaster/toastr.js?v=<?php echo time();?>"></script>
-    <script src="<?php echo RUTA_JS?>jsmenu.js?v=<?php echo time();?>"></script>
-    <script src="<?php echo RUTA_JS?>jsindex.js?v=<?php echo time();?>"></script>
     <script src="<?php echo RUTA_JS?>Utils.js?v=<?php echo time();?>"></script>
+    <script src="<?php echo RUTA_JS?>jsindex.js?v=<?php echo time();?>"></script>
     <script type="text/javascript">
-        initButtonCalendarDaysMinToday('llegada');
-        initButtonCalendarDaysMinToday('retorno');
-        var URLactual = window.location;
-        // if(URLactual['href'] != 'http://www.marketinghpe.com/microsite/value_warriors/'){
-        //     location.href = 'http://www.marketinghpe.com/microsite/value_warriors/';
+        // var URLactual = window.location;
+        // if(URLactual['href'] != 'http://www.marketinghp.net/microsite/DCN/evento_cr/'){
+        //     location.href = 'http://www.marketinghp.net/microsite/DCN/evento_cr/';
         // }
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
             $('select').selectpicker('mobile');

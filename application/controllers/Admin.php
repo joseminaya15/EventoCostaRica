@@ -13,34 +13,20 @@ class Admin extends CI_Controller {
         $this->output->set_header('Pragma: no-cache');
     }
 	public function index(){
-		/*if($this->session->userdata('usuario') == null){
-			header("location: Login");
-		}*/
         $datos = $this->M_reporte->getDatosUser();
         $html  = '';
-        $cont  = 1;
-        $invitado = '';
         if(count($datos) == 0) {
             $html = '';
         }else {
             foreach ($datos as $key){
-		$invitado = $key->invitation == 1 ? 'Si' : 'No';
                 $html .= '<tr class="tr-cursor-pointer">
-                            <td class="text-left">'.$key->tipo.'</td>
-                            <td class="text-left">'.$key->breakout.'</td>
-                            <td class="text-left">'.$key->name.' '.$key->surname.'</td>
-                            <td class="text-left">'.$key->company.'</td>
-                            <td class="text-left">'.$key->country.'</td>
-                            <td class="text-left">'.$key->position.'</td>
-                            <td class="text-right">'.$key->phone.'</td>
+                            <td class="text-left">'.$key->nombre.' '.$key->apellido.'</td>
                             <td class="text-left">'.$key->email.'</td>
-                            <td class="text-left">'.$key->size.'</td>
-                            <td class="text-center">'.$key->llegada.'</td>
-                            <td class="text-center">'.$key->retorno.'</td>
-                            <td class="text-right">'.$key->reserva.'</td>
-                            <td class="text-left">'.$invitado.'</td>
+                            <td class="text-right">'.$key->telefono.'</td>
+                            <td class="text-left">'.$key->empresa.'</td>
+                            <td class="text-left">'.$key->cargo.'</td>
+                            <td class="text-left">'.$key->pais.'</td>
                         </tr>';
-                $cont++;
             }
         }
 		$data['html'] = $html;

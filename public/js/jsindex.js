@@ -76,6 +76,7 @@ function sendInformation(){
 				$('.js-input').find('select').val('0');
 				$('.js-input').find('select').selectpicker('refresh');
 				$('#confirmation').addClass('aparecer');
+				msj('success', data.msj);
         	}else{
         		msj('error', data.msj);
         		return;
@@ -83,35 +84,6 @@ function sendInformation(){
 		} catch (err) {
 			msj('error', err.message);
 		}
-	});
-}
-function ingresar(){
-	var correo = $('#correo').val();
-	if(correo == null || correo == '') {
-		msj('error', 'Email debe completarse');
-		return;
-	}
-	if(!validateEmail(correo)){
-		msj('error', 'El formato de email es incorrecto');
-		return;
-	}
-	$.ajax({
-		data  : { correo : correo},
-		url   : 'home/ingresar',
-		type  : 'POST'
-	}).done(function(data){
-		try{
-        	data = JSON.parse(data);
-        	if(data.error == 0){
-        		$('#correo').val("");
-        		$('#ModalLogin').modal('show');
-        	}else {
-				msj('error', 'Email no registrado');
-        		return;
-        	}
-      } catch (err){
-        msj('error',err.message);
-      }
 	});
 }
 function validateEmail(email){
